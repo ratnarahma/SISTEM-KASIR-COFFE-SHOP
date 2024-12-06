@@ -8,15 +8,16 @@ Program ini merupakan sistem transaksi untuk kedai kopi "Coffe Shop Jaya" yang b
 
 # Fitur-Fitur
 Fitur utama yang mengelola sistem kasir coffeshop mencakup:
-
-1. Menampilkan Informasi dan Menu
-2. Input Nama Barista, Nama Pembeli, dan Data Pembelian
-3. Perhitungan Total Harga
-4. Keterangan Diskon untuk Pembelian Jumlah tertentu
-5. Perhitungan Pembayaran Akhir Setelah Dikenai Diskon
-6. Penyimpanan Data ke File Excel
-7. Rincian Data Pesanan
-8. Output Pesan Penutup
+1. Antarmuka Grafis dengan Thinker
+2. Input Nama Barista dan Nama Pembeli
+3. Manajemen Menu dan Harga
+4. Validasi Input
+5. Perhitungan Total Harga
+6. Keterangan Diskon untuk Pembelian Jumlah tertentu
+7. Perhitungan Pembayaran Akhir Setelah Dikenai Diskon
+8. Penyimpanan Data ke File Excel
+9. Tampilan Rincian Pesanan
+10. Output Pesan Penutup
 
 # Diagram Alir (Flowchart)
 ![flowchart coffeshop](https://github.com/user-attachments/assets/fdfdef34-e3c9-47f0-9020-b7009176336e)
