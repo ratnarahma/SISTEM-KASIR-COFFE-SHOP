@@ -20,6 +20,4 @@ Fitur utama yang mengelola sistem kasir coffeshop mencakup:
 10. Output Pesan Penutup
 
 # Diagram Alir (Flowchart)
-![flowchart coffeshop](https://github.com/user-attachments/assets/fdfdef34-e3c9-47f0-9020-b7009176336e)
-## Revisi Diagram Alir (Flowchart)
-![flowchart revisi](https://github.com/user-attachments/assets/f6dc84b7-2cf3-4228-9ff4-fa252066931b)
+![FLOWCHART](https://github.com/user-attachments/assets/2e04e0e4-8e71-45d2-9b82-387ef75c5316)
