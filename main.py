@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
-from modul import create_excel_file, save_to_excel, calculate_total, calculate_change, menu_prices
+from modul import create_excel_file, save_to_excel, calculate_total, calculate_change, read_menu_from_excel
 
 class KasirApp:
     def __init__(self, root):
@@ -30,6 +30,9 @@ class KasirApp:
         self.pembeli = ""
         self.menu = {}
         self.uang = 0
+
+        # Load menu prices from Excel
+        self.menu_prices = read_menu_from_excel()
 
         # Create the Excel file if not already created
         create_excel_file()
@@ -69,8 +72,8 @@ class KasirApp:
         self.menu_temp = {}
         self.menu_sugar = {}
 
-        # Menampilkan menu
-        for i, (menu, price) in enumerate(menu_prices.items()):
+        # Menampilkan menu yang diambil dari file Excel
+        for i, (menu, price) in enumerate(self.menu_prices.items()):
             var = tk.IntVar()
             self.menu_vars[menu] = var
             tk.Checkbutton(self.frame, text=f"{menu} - Rp {price}", variable=var, font=self.font_small, bg="#C9BCB3").grid(row=i+1, column=0, sticky="w")
@@ -86,10 +89,10 @@ class KasirApp:
             self.menu_sugar[menu] = sugar_var
             tk.OptionMenu(self.frame, sugar_var, "Normal", "Less Sugar").grid(row=i+1, column=3)
 
-        tk.Label(self.frame, text="Isi jumlah pesanan menggunakan angka!", fg="red", font=self.font_small, bg="#C9BCB3").grid(row=len(menu_prices)+1, column=1, sticky="w")
-        tk.Button(self.frame, text="Next", font=self.font_small, command=self.page3).grid(row=len(menu_prices)+2, columnspan=4, pady=10)
-        tk.Button(self.frame, text="Back", font=self.font_small, command=self.page1).grid(row=len(menu_prices)+3, columnspan=4, pady=10)
-        
+        tk.Label(self.frame, text="Isi jumlah pesanan menggunakan angka!", fg="red", font=self.font_small, bg="#C9BCB3").grid(row=len(self.menu_prices)+1, column=1, sticky="w")
+        tk.Button(self.frame, text="Next", font=self.font_small, command=self.page3).grid(row=len(self.menu_prices)+2, columnspan=4, pady=10)
+        tk.Button(self.frame, text="Back", font=self.font_small, command=self.page1).grid(row=len(self.menu_prices)+3, columnspan=4, pady=10)
+
     def page3(self):
         self.menu = {}
         for menu, var in self.menu_vars.items():
@@ -110,7 +113,7 @@ class KasirApp:
             return
 
         self.clear_frame()
-        total_harga, diskon, harga_bayar = calculate_total(self.menu, menu_prices)
+        total_harga, diskon, harga_bayar = calculate_total(self.menu, self.menu_prices)
 
         tk.Label(self.frame, text="Rincian Pesanan:", font=self.font_default, bg="#C9BCB3").grid(row=0, column=0, sticky="w")
         for i, (menu, (jumlah, temp, sugar)) in enumerate(self.menu.items()):
@@ -136,7 +139,7 @@ class KasirApp:
             messagebox.showerror("Error", "Uang Pembayaran harus berupa angka positif.")
             return
 
-        total_harga, diskon, harga_bayar = calculate_total(self.menu, menu_prices)
+        total_harga, diskon, harga_bayar = calculate_total(self.menu, self.menu_prices)
 
         try:
             uang_kembali = calculate_change(uang, harga_bayar)
