@@ -125,8 +125,7 @@ class KasirApp:
         self.entry_uang.grid(row=len(self.menu)+4, column=1)
 
         tk.Button(self.frame, text="Hitung", font=self.font_default, command=self.calculate).grid(row=len(self.menu)+5, columnspan=2, pady=10)
-# Memperbaiki bagian tombol back
-        tk.Button(self.frame, text="Back", font=self.font_default, command=self.page2).grid(row=len(self.menu)+6, columnspan=2, pady=10)
+        tk.Button(self.frame, text="Back", font=self.font_default, command=self.page1).grid(row=len(self.menu)+6, columnspan=2, pady=10)
 
     def calculate(self):
         try:
