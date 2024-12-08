@@ -19,6 +19,12 @@ Fitur utama yang mengelola sistem kasir coffeshop mencakup:
 9. Tampilan Rincian Pesanan
 10. Output Pesan Penutup
 
+Fungsi Utama Aplikasi
+1. Mendukung Sistem Transaksi Kasir: Aplikasi ini membantu barista mencatat pesanan pelanggan, menghitung total harga, memberikan diskon (jika ada), dan menentukan uang kembalian.
+2. Pencatat Data: Data transaksi disimpan ke file Excel sehingga mempermudah analisis dan laporan keuangan.
+3. Grafis Antarmuka yang Interaktif: Tampilan aplikasi ini menggunakan gambar, tombol kotak teks, dan menu yang mudah digunakan.
+4. Penanganan Kesalahan Input: Aplikasi memastikan validasi input (seperti, memastikan jumlah pesanan adalah angka positif dan pembayaran tidak kurang dari total harga).
+
 # Diagram Alir (Flowchart)
 ![FLOWCHART](https://github.com/user-attachments/assets/2e04e0e4-8e71-45d2-9b82-387ef75c5316)
 
