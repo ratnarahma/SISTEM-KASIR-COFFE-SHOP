@@ -89,41 +89,6 @@ class KasirApp:
         tk.Label(self.frame, text="Isi jumlah pesanan menggunakan angka!", fg="red", font=self.font_small, bg="#C9BCB3").grid(row=len(menu_prices)+1, column=1, sticky="w")
         tk.Button(self.frame, text="Next", font=self.font_small, command=self.page3).grid(row=len(menu_prices)+2, columnspan=4, pady=10)
         tk.Button(self.frame, text="Back", font=self.font_small, command=self.page1).grid(row=len(menu_prices)+3, columnspan=4, pady=10)
-
-    # def page2(self):
-    #     self.barista = self.entry_barista.get()
-    #     self.pembeli = self.entry_pembeli.get()
-
-    #     if not self.barista or not self.pembeli:
-    #         messagebox.showerror("Error", "Nama Barista dan Nama Pembeli harus diisi.")
-    #         return
-
-    #     self.clear_frame()
-    #     tk.Label(self.frame, text="Menu", font=self.font_small, bg="#C9BCB3").grid(row=0, column=0, sticky="w")
-    #     self.menu_vars = {}
-    #     self.menu_entries = {}
-    #     self.menu_temp = {}
-    #     self.menu_sugar = {}
-
-    #     for i, (menu, price) in enumerate(menu_prices.items()):
-    #         var = tk.IntVar()
-    #         self.menu_vars[menu] = var
-    #         tk.Checkbutton(self.frame, text=f"{menu} - Rp {price}", variable=var, font=self.font_small, bg="#C9BCB3").grid(row=i+1, column=0, sticky="w")
-    #         entry = tk.Entry(self.frame, font=self.font_small)
-    #         entry.grid(row=i+1, column=1)
-    #         self.menu_entries[menu] = entry
-
-    #         temp_var = tk.StringVar(value="Ice")
-    #         self.menu_temp[menu] = temp_var
-    #         tk.OptionMenu(self.frame, temp_var, "Ice", "Hot").grid(row=i+1, column=2)
-
-    #         sugar_var = tk.StringVar(value="Normal")
-    #         self.menu_sugar[menu] = sugar_var
-    #         tk.OptionMenu(self.frame, sugar_var, "Normal", "Less Sugar").grid(row=i+1, column=3)
-
-    #     tk.Label(self.frame, text="Isi jumlah pesanan menggunakan angka!", fg="red", font=self.font_small, bg="#C9BCB3").grid(row=len(menu_prices)+1, column=1, sticky="w")
-    #     tk.Button(self.frame, text="Next", font=self.font_small, command=self.page3).grid(row=len(menu_prices)+2, columnspan=4, pady=10)
-    #     tk.Button(self.frame, text="Back", font=self.font_small, command=self.page1).grid(row=len(menu_prices)+3, columnspan=4, pady=10)
         
     def page3(self):
         self.menu = {}
@@ -189,7 +154,7 @@ class KasirApp:
             f"Diskon: Rp {diskon}\n"
             f"Harga Bayar: Rp {harga_bayar}\n"
             f"Uang Kembali: Rp {uang_kembali}\n"
-            "\nTerima kasih telah mengunjungi Coffee Shop Jaya\nSelamat menikmati pesanan Anda"
+            "\nTerima kasih atas kunjungannya.\nSelamat menikmati pesanan Anda"
         )
 
         save_to_excel(self.barista, self.pembeli, self.menu, total_harga, diskon, harga_bayar, uang, uang_kembali)
