@@ -2,31 +2,29 @@ import os
 from openpyxl import load_workbook
 from tkinter import messagebox
 
-# Harga menu
-menu_prices = {
-    'Espresso': 12000,
-    'Americano': 15000,
-    'Cappucino': 20000,
-    'Mochacino': 20000,
-    'Caramel Macchiato': 20000,
-    'Vanilla Latte': 20000,
-    'Hazelnut Latte': 20000,
-    'Caffe Latte': 20000,
-    'Chocolatte': 20000,
-    'Matcha': 20000,
-    'Taro': 20000,
-    'Cookies & Cream': 20000,
-    'Jasmine Tea': 12000,
-    'Original Tea': 10000,
-    'Lemon Tea': 13000,
-    'Lychee Tea': 17000,
-    'Strawberry Tea': 15000
-}
-
-# Nama file Excel
+# Nama file Excel yang menyimpan menu dan harga
+menu_excel_file = "menu.xlsx"
 excel_file = "rekapan_pesanan.xlsx"
 
-# Buat file Excel jika belum ada
+# Fungsi untuk membaca menu dan harga dari file Excel
+def read_menu_from_excel():
+    try:
+        # Memuat workbook dan sheet dari file Excel
+        wb = load_workbook(menu_excel_file)
+        ws = wb.active
+
+        # Membaca menu dan harga dari sheet Excel
+        menu_prices = {}
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            menu, price = row
+            menu_prices[menu] = price
+
+        return menu_prices
+    except Exception as e:
+        messagebox.showerror("Error", f"Error reading menu from Excel: {e}")
+        return {}
+
+# Buat file Excel untuk pesanan jika belum ada
 def create_excel_file():
     if not os.path.exists(excel_file):
         try:
