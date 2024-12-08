@@ -154,7 +154,7 @@ class KasirApp:
             f"Diskon: Rp {diskon}\n"
             f"Harga Bayar: Rp {harga_bayar}\n"
             f"Uang Kembali: Rp {uang_kembali}\n"
-            "\nTerima kasih atas kunjungannya.\nSelamat menikmati pesanan Anda"
+            "\nTerima kasih atas kunjungannya.\nSelamat menikmati pesanan Anda."
         )
 
         save_to_excel(self.barista, self.pembeli, self.menu, total_harga, diskon, harga_bayar, uang, uang_kembali)
