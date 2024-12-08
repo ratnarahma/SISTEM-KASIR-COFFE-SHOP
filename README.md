@@ -25,6 +25,12 @@ Fitur utama yang mengelola sistem kasir coffeshop mencakup:
 3. Grafis Antarmuka yang Interaktif: Tampilan aplikasi ini menggunakan gambar, tombol kotak teks, dan menu yang mudah digunakan.
 4. Penanganan Kesalahan Input: Aplikasi memastikan validasi input (seperti, memastikan jumlah pesanan adalah angka positif dan pembayaran tidak kurang dari total harga).
 
+# Library
+1. Thinker
+2. Os
+3. Pillow
+4. Openpyxl
+   
 # Diagram Alir (Flowchart)
 ![FLOWCHART](https://github.com/user-attachments/assets/2e04e0e4-8e71-45d2-9b82-387ef75c5316)
 
