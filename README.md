@@ -8,7 +8,7 @@ Aplikasi ini merupakan sistem transaksi untuk kedai kopi "Coffee Shop Jaya" yang
 
 # Fitur-Fitur
 Fitur utama yang mengelola sistem kasir coffeshop mencakup:
-1. Antarmuka Grafis dengan Thinker
+1. Antarmuka Grafis dengan Tkinter
 2. Input Nama Barista dan Nama Pembeli
 3. Manajemen Menu dan Harga
 4. Validasi Input
@@ -26,13 +26,15 @@ Fitur utama yang mengelola sistem kasir coffeshop mencakup:
 4. Penanganan Kesalahan Input: Aplikasi memastikan validasi input (seperti, memastikan jumlah pesanan adalah angka positif dan pembayaran tidak kurang dari total harga).
 
 # Library
-1. Thinker
+1. Tkinter
 2. Os
 3. Pillow
 4. Openpyxl
    
 # Diagram Alir (Flowchart)
 ![FLOWCHART](https://github.com/user-attachments/assets/2e04e0e4-8e71-45d2-9b82-387ef75c5316)
+# Flowchart Revisi (setelah presentasi)
+[FLOWCHART REVISI.pdf](https://github.com/user-attachments/files/18166922/FLOWCHART.REVISI.pdf)
 
 # Site Map
 ![SITE MAP](https://github.com/user-attachments/assets/d9db3f97-9d94-4e70-827b-235605b40d6a)
