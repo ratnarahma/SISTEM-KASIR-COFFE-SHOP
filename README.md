@@ -34,7 +34,7 @@ Fitur utama yang mengelola sistem kasir coffeshop mencakup:
 # Diagram Alir (Flowchart)
 ![FLOWCHART](https://github.com/user-attachments/assets/2e04e0e4-8e71-45d2-9b82-387ef75c5316)
 # Flowchart Revisi (setelah presentasi)
-[FLOWCHART REVISI.pdf](https://github.com/user-attachments/files/18166922/FLOWCHART.REVISI.pdf)
+![FLOWCHART REVISI (1)](https://github.com/user-attachments/assets/6645d1bf-0179-4c34-b41f-6c4a32b4a454)
 
 # Site Map
 ![SITE MAP](https://github.com/user-attachments/assets/d9db3f97-9d94-4e70-827b-235605b40d6a)
